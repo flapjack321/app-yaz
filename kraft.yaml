@@ -1,0 +1,67 @@
+---
+specification: '0.5'
+name: yaz
+unikraft:
+  version: '0.5'
+  kconfig:
+    - CONFIG_LIBUKLIBPARAM=y
+    - CONFIG_LIBUKSCHEDCOOP=y
+    - CONFIG_LIBSYSCALL_SHIM=y
+    - CONFIG_LIBPOSIX_LIBDL=y
+    - CONFIG_LIBPOSIX_PROCESS=y
+    - CONFIG_LIBPOSIX_USER=y
+    - CONFIG_LIBPOSIX_SYSINFO=y
+    - CONFIG_UKSYSINFO=y
+    - CONFIG_LIBUKMMAP=y
+    - CONFIG_LIBUKTIME=y
+    - CONFIG_LIBDEVFS=y
+    - CONFIG_LIBUKSWRAND=y
+    - CONFIG_LIBUKSWRAND_DEVFS=y
+    - CONFIG_LIBVFSCORE_AUTOMOUNT_ROOTFS=y
+    - CONFIG_LIBVFSCORE_ROOTFS_RAMFS=y
+    - CONFIG_LIBVFSCORE_ROOTFS="ramfs"
+    - CONFIG_LIBUKDEBUG=y
+    - CONFIG_LIBUKSIGNAL=y
+targets:
+  - architecture: x86_64
+    platform: kvm
+libraries:
+  libunwind:
+    version: 2d35a48
+    kconfig:
+      - CONFIG_LIBUNWIND=y
+  compiler-rt:
+    version: a62a9fe
+    kconfig:
+      - CONFIG_LIBCOMPILER_RT=y
+  libcxx:
+    version: ed1b8b4
+    kconfig:
+      - CONFIG_LIBCXX=y
+  libcxxabi:
+    version: f9bfd04
+    kconfig:
+      - CONFIG_LIBCXXABI=y
+  newlib:
+    version: 676244e
+    kconfig:
+      - CONFIG_LIBNEWLIBC=y
+  lwip:
+    version: 3c85bd4
+    kconfig:
+      - CONFIG_LWIP_UKNETDEV=y
+      - CONFIG_LWIP_THREADS=y
+      - CONFIG_LWIP_AUTOIFACE=y
+      - CONFIG_LWIP_SOCKET=y
+      - CONFIG_LWIP_IPV4=y
+      - CONFIG_LWIP_IPV6=y
+      - CONFIG_LWIP_UDP=y
+      - CONFIG_LWIP_RAW=y
+      - CONFIG_LWIP_DNS=y
+  yaz:
+    version: 36c03f8
+    kconfig:
+      - CONFIG_LIBYAZ=y
+      - CONFIG_LIBYAZ_MAIN_FUNCTION=y
+volumes: {}
+networks: {}
