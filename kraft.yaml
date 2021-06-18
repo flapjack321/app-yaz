@@ -56,7 +56,7 @@ libraries:
       - CONFIG_LWIP_IPV4=y
       - CONFIG_LWIP_IPV6=y
       - CONFIG_LWIP_UDP=y
-      - CONFIG_LWIP_RAW=y
+      - CONFIG_LWIP_TCP=y
       - CONFIG_LWIP_DNS=y
   yaz:
     version: staging
