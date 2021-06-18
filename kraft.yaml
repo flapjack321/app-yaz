@@ -2,7 +2,7 @@
 specification: '0.5'
 name: yaz
 unikraft:
-  version: '0.5'
+  version: staging
   kconfig:
     - CONFIG_LIBUKLIBPARAM=y
     - CONFIG_LIBUKSCHEDCOOP=y
@@ -27,27 +27,27 @@ targets:
     platform: kvm
 libraries:
   libunwind:
-    version: 2d35a48
+    version: staging
     kconfig:
       - CONFIG_LIBUNWIND=y
   compiler-rt:
-    version: a62a9fe
+    version: staging
     kconfig:
       - CONFIG_LIBCOMPILER_RT=y
   libcxx:
-    version: ed1b8b4
+    version: staging
     kconfig:
       - CONFIG_LIBCXX=y
   libcxxabi:
-    version: f9bfd04
+    version: staging
     kconfig:
       - CONFIG_LIBCXXABI=y
   newlib:
-    version: 676244e
+    version: staging
     kconfig:
       - CONFIG_LIBNEWLIBC=y
   lwip:
-    version: 3c85bd4
+    version: staging
     kconfig:
       - CONFIG_LWIP_UKNETDEV=y
       - CONFIG_LWIP_THREADS=y
@@ -59,7 +59,7 @@ libraries:
       - CONFIG_LWIP_RAW=y
       - CONFIG_LWIP_DNS=y
   yaz:
-    version: 36c03f8
+    version: staging
     kconfig:
       - CONFIG_LIBYAZ=y
       - CONFIG_LIBYAZ_MAIN_FUNCTION=y
